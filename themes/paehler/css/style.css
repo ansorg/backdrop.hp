@@ -1,0 +1,94 @@
+
+body { padding: 0px; }
+
+/* HEADER */
+.logo img { width: 160px; }
+
+.block-system-header, .block-views-topnav-block, .l-top, .l-container {
+    padding: 0 10px;
+}
+
+.block-system-header, .l-top { text-align: center; }
+
+.l-header { border-bottom: 4px solid #fa813f}
+
+/* slideshow */
+.block-views-homepage-slideshow-block { background-color: #02b053}
+header .view-id-homepage_slideshow .view-content { position: relative; height: 105px;}
+header .view-id-homepage_slideshow .view-content div { position: absolute;  margin: auto; right: 0; left: 0; width: 300px; }
+header .view-id-homepage_slideshow .view-content img { width: 300px; height: 105px; display: block;
+    opacity: 0;
+    transition: opacity ease 2s;
+    /*box-shadow: 3px 3px 5px -2px;*/
+}
+header .view-id-homepage_slideshow .view-content div::after { content: ' '; display: block; clear: both; }
+header .view-id-homepage_slideshow .view-content img.visible { opacity: 1; }
+
+/* topnav */
+.block-views-topnav-block { background-color: #02b053; border-top: 3px #02b053 solid; }
+.view-topnav  ul { padding: 0; margin: 0; position: relative; display: flex; width: 100%; text-align: center;}
+.view-topnav  li { flex: 1; display: flex; }
+.view-topnav  li a { display: inline-block; padding: 4px 0 0 0; border-bottom: 4px solid transparent; color: #fff; font-size: 1rem; width: 100%; text-decoration: none; }
+.view-topnav  li a.active ,header li a:hover {
+    background-color: #fa813f;
+    border-bottom: 4px solid #fa813f;
+    color: white;
+}
+
+/* CONTENT */
+.l-container {
+    background-repeat: no-repeat;
+    background-position: -0px bottom;
+    padding-bottom: 1rem;
+    margin-bottom: -8px;
+}
+
+.term-listing-heading { }
+.term-listing-heading img { width: 100%; height: auto; border: 1px solid black; }
+
+article header h2 { font-size: 1.2rem; }
+article  a { color: #02b053; }
+article header .meta { font-size: 0.7rem; text-align: right; }
+article .field-type-image img { width: 100%; height: auto; border: 1px solid black; }
+article footer { text-align: right; }
+
+    /* FOOTER */
+.l-footer { display: flex; background-color: #fa813f; padding: 1rem; border-top: 4px solid #02b053;  }
+.l-footer > div { flex: 1 0 auto; }
+.l-footer .menu { margin: 0; padding: 0; list-style: none; }
+.l-footer .menu li { list-style: none; }
+.l-footer li, footer span { display: inline-block; }
+.l-footer * { color: white;}
+.block-system-powered-by { text-align: right; }
+
+/*medium*/
+@media screen and (min-device-width:640px) {
+	body { padding: 0 20px; }
+    .logo img { width: 160px; }
+    header .view-id-homepage_slideshow .view-content { height: 210px;}
+    header .view-id-homepage_slideshow .view-content div { width: 600px;  }
+    header .view-id-homepage_slideshow .view-content img { width: 600px; height: 210px;}
+
+    .l-top { padding-left: 190px; text-align: left; }
+
+    .l-container {
+        background-image: url("../img/Logo-Baum-Stuehle.png");
+        background-size: 10rem;
+        padding-left: 190px;
+        padding-bottom: 1rem;
+        margin-bottom: -8px;
+        min-height: 630px;
+    }
+
+    .term-listing-heading { margin-left: -190px; }
+}
+
+/*large*/
+@media screen and (min-device-width:1025px) {
+    body { padding: 0 20px; }
+    .logo img { width: 160px; }
+    div.layout--one-column { margin: 0 auto; max-width: 900px; }
+    header .view-id-homepage_slideshow .view-content { height: 315px;}
+    header .view-id-homepage_slideshow .view-content div { width: 900px;  }
+    header .view-id-homepage_slideshow .view-content img { width: 900px; height: 315px;}
+}

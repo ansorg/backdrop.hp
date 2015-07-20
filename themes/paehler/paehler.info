@@ -1,0 +1,10 @@
+name = Paehler
+description = Custom Theme for paehler.info
+backdrop = 1.x
+base theme = bartik
+version = 1.0
+
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/colors.css
+
+scripts[] = js/paehler.js
